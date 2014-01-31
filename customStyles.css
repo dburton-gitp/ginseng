@@ -1,0 +1,26 @@
+#settings { width:250px; float:left; }
+#settings input { display:inline-block !important; }
+#settings input:focus { outline: none !important; }
+
+.add { 
+	padding: 7px 15px;
+	border: 1px solid #002966;
+	border-radius: 10px;
+	font-family: Arial;
+	font-size: 15px;
+	margin: 10px 10px 0 0;
+	display:inline-block;
+}
+
+#settings .btn-add {
+	padding: 7px 15px;
+	border: 1px solid #04520b;
+	background: -webkit-linear-gradient(top, #1cd43c, #0a8214);
+	cursor: pointer; 
+	border-radius: 10px;
+	font-family: Arial;
+	color: #ffffff;
+	margin:10px 0 10px 0;
+	text-align: center;
+	font-size:15px;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Ginseng",
+  "version": "1",
+  "description": "This extension will switch between hostnames while maintaining the relative path.",
+  "options_page": "options.html",
+  "manifest_version": 2,
+  "icons": { "16": "icon_16.png", "48": "icon_48.png", "128": "icon_128.png" },
+  "browser_action": {
+    "name": "jQuery Test",
+    "default_icon": "icon_16.png",
+    "default_popup": "popup.html"
+  }, 
+  "content_scripts": [ {
+    "js": [ "jquery-2.0.3.min.js", "my.js" ],
+    "css": ["customStyles.css"],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+  "web_accessible_resources": [  ],
+  "permissions": [ "tabs", "storage", "http://*/*", "https://*/*" ]
+}

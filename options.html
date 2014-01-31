@@ -1,0 +1,148 @@
+<html>
+<head><title>Ginseng Options</title>
+
+<style>
+.table {
+    display:table;
+}
+.cell {
+    display:table-cell;
+}
+
+div.header { font-weight: bold; }
+.header {
+	font-size: 15px;
+    font-family: 'AvenirLTStd', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif' !important;
+    text-align:left;
+    width: 200px;
+}
+
+.options { 
+	width: 690px; 
+	margin-bottom: 50px;
+	-webkit-border-top-left-radius: 14px;
+	-webkit-border-top-right-radius: 14px;
+	-webkit-border-bottom-left-radius: 14px;
+	-webkit-border-bottom-right-radius: 14px;
+	background-color: #f5ebd8;
+	/*box-shadow: 5px 5px 15px #222222;*/
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#head {
+	width: 100%;
+	height:100px;
+	background-color: #eeeeee;
+	border-bottom: 1px solid #000000;
+}
+
+#footer {
+	width: 100%;
+	height:150px;
+	background-color: #eeeeee;
+	border-top: 1px solid #000000;
+	position: relative;
+	/*margin-top: -150px;  negative value of footer height */
+	clear:both;
+}
+.inner-head { width: 580px; margin-right: auto; margin-left: auto; }
+.inner-head h1 {
+	text-shadow:1px 1px 1px #000000;
+	font-size: 72px;
+	font-family: "Avenir";
+	color: #e5c690;
+	margin-left: 150px;
+	padding-top: 8px;
+}
+.inner-head img { float: left; }
+
+}
+.storage { margin-right: 9px !important; }
+.tab { margin-left: 50px; }
+.hidden { display:none; }
+.clear { clear: both; }
+.right { float: right; margin-right: 37px;}
+.btn-set-width { width: 100px; }
+
+#status { display: inline; font-family: 'AvenirLTStd', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif' !important; } 
+.ignore { margin-left: -120px; }
+
+input.cell, div.cell.header { margin-right:5px; padding: 5px; } 
+input.text-field.error {
+	border: 1px solid #f56a7d;
+	box-shadow: 0 0 10px rgba(232,83,85,0.22);
+	-webkit-box-shadow: 0 0 10px rgba(232,83,85,0.22);
+	-moz-box-shadow: 0 0 10px rgba(232,83,85,0.22);
+}
+
+input[id^="hostname"], input[id^="label"] {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+}
+
+/* browser default overrides */
+:focus {
+outline: -webkit-focus-ring-color none 0px !important;
+}
+
+button { margin: 0px 0px 0px 0px; padding: 5px; font-size: 15px; cursor:pointer;}
+.button-row { margin-top:20px; }
+
+</style>
+
+</head>
+
+<body>
+	<div id="head">
+		<div class="inner-head">
+			<img src="icon_128.png"/>
+			<h1>GINSENG</h1>
+		</div>
+
+	</div>
+	<div class="options" style="margin-right:auto; margin-left:auto; margin-top: 50px; border: 10px solid #eeeeee; padding:40px 0px 20px 20px;">
+		<div class="table">
+			<div class="row">
+				<div class="cell header">Hostname</div>
+				<div class="cell header">Button Label</div>
+				<div class="cell header">Open New Tab</div>
+			</div>
+
+			<div class="storage row"></div>
+
+		  	<div id="template" class="addHostnameTemplate row hidden">
+		  		<input id="hostname" class="cell header" type="text" name="hostname" />
+				<input id="label" class="cell header" type="text" name="label" />
+				<input id="tab" class="cell header tab" type="checkbox" name="tab" />
+			</div>
+
+		</div>
+
+		<div id="container"></div>
+
+		<div class="button-row">
+			<button id="addRow">Create New Set</button>
+			<button id="save">Save</button>
+			<div id="status"></div>
+			<button id="clear" class="right btn-set-width">Delete All</button>
+		</div>
+		<br /><br />
+		<div class="clear"></div>
+	</div>
+
+	<div id="footer"></div>
+
+	<div id="storagevars"></div>
+</body>
+
+<script src="jquery-2.0.3.min.js"></script>
+<script src="options.js"></script>
+
+</html>
